@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawGraphics" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7xP-k8-sZZ">
+                                <rect key="frame" x="16" y="44" width="358" height="766"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dfh-BE-oL0">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fs-rF-lP5">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.666666666666671" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="qGb-RC-jwO"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="선"/>
+                                                <connections>
+                                                    <action selector="btnDrawLine:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfW-2h-58i"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrH-bx-WSb">
+                                                <rect key="frame" x="71.666666666666657" y="0.0" width="71.666666666666657" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="dPN-67-XeO"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="사각형"/>
+                                                <connections>
+                                                    <action selector="btnDrawRectangle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nUN-V2-2ia"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OJn-gK-ShE">
+                                                <rect key="frame" x="143.33333333333334" y="0.0" width="71.333333333333343" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="uBZ-HK-JDi"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="원"/>
+                                                <connections>
+                                                    <action selector="btnDrawCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="End-uD-IOo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTC-0s-mH5">
+                                                <rect key="frame" x="214.66666666666666" y="0.0" width="71.666666666666657" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Jna-Gx-5E8"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="호"/>
+                                                <connections>
+                                                    <action selector="btnDrawArc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ba2-Z4-7YN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="daI-ue-1FA">
+                                                <rect key="frame" x="286.33333333333331" y="0.0" width="71.666666666666686" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fpy-1R-x8u"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="채우기"/>
+                                                <connections>
+                                                    <action selector="btnDrawFill:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ae2-Mu-lYn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMJ-Qu-oLn">
+                                        <rect key="frame" x="0.0" y="40" width="358" height="726"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7xP-k8-sZZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K2v-6h-nsD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7xP-k8-sZZ" secondAttribute="trailing" constant="16" id="QTz-wK-1o6"/>
+                            <constraint firstItem="7xP-k8-sZZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YmQ-2G-K6D"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7xP-k8-sZZ" secondAttribute="bottom" id="z6C-QB-3m4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="rMJ-Qu-oLn" id="yPw-Yt-noM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
