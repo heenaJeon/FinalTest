@@ -42,3 +42,25 @@ override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) //사�
 ```
 
 > 페이지 컨트롤러 이용해서 여러 장의 사진 올리기
+1. 변수 추가
+```
+var images = ["피카츄.jpeg", "꼬부기.jpeg", "이상해씨.jpeg", "파이리.jpeg", "잠만보.jpeg", "푸린.jpeg"]
+```
+2. 페이지 변경 시 동작할 함수 pageChange함수 코딩
+```
+@IBAction func pageChange(_ sender: UIPageControl) {
+picView.image = UIImage(named: images[pageControl.currentPage])
+}
+```
+3. 앱 시작 시 수행할 내용 코딩 viewDidLoad함수
+```
+override func viewDidLoad()
+  super.viewDidLoad()
+  pageControl.numberOfPages = images.count
+  pageControl.currentPage = 0
+  pageControl.pageIndicatorTintColor = UIColor.green
+  pageControl.currentPageIndicatorTintColor = UIColor.blue
+  picView.image = UIImage(named: images[0])
+}
+```
+######앱을 실행하면, 화면의 반은 포켓몬사진으로 되어있고, 나머지 반은 그림을 그릴 수 있는 스케치 부분이 있습니다. 포켓몬 사진은 총 6장으로, 페이지컨트롤러를 이용하여 원하는 포켓몬을 고를 수 있게 됩니다. 원하는 사진을 골라서 아래 스케치를 자유롭게 하시고, 다른 사진을 그리고 싶으시다면 clear버튼을 이용하여 기존에 그린 그림을 지우고 다시 새로운 그림을 그리면 됩니다. 감사합니다^^
